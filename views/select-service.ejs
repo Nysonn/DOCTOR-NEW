@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Service</title>
+
+    <!-- Import Roboto Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/select-service.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Select Service and Role</h1>
+        <form action="/video-call" method="get">
+            <div class="input-group">
+                <label for="service">Medical Service:</label>
+                <select name="service" id="service" required>
+                    <option value="Dental">Dental</option>
+                    <option value="Pediatrics">Pediatrics</option>
+                    <option value="Gynecology">Gynecology</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="role">Your Role:</label>
+                <select name="role" id="role" required>
+                    <option value="Patient">Patient</option>
+                    <option value="Doctor">Doctor</option>
+                </select>
+            </div>
+
+            <button type="submit">Join Consultation</button>
+        </form>
+    </div>
+</body>
+</html>
