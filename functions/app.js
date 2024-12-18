@@ -2,6 +2,7 @@ import express from "express";
 import http from "http";
 import { Server } from "socket.io";
 import bodyParser from "body-parser";
+import * as functions from 'firebase-functions';
 
 const app = express();
 const server = http.createServer(app);
@@ -51,3 +52,6 @@ const PORT = 3000;
 server.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+export const api = functions.https.onRequest(app);
+
